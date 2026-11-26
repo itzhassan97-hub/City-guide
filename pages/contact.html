@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Visitor Enquiries | Discover Manchester City Guide</title>
+  <meta name="description" content="Send a visitor enquiry about Manchester attractions, accessible routes, group itineraries, or local transport advice.">
+  <meta property="og:title" content="Contact Discover Manchester">
+  <meta property="og:description" content="Have a question about visiting Manchester? Use our accessible enquiry form for local advice and itinerary tips.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="index.html">
+        <svg class="brand-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2c1.5 0 2.7 1.1 2.9 2.5 1.9-.6 4 .2 4.8 2 .7 1.6 0 3.5-1.5 4.3 1.4 1.1 2.3 2.9 2.3 4.9 0 3.5-3.8 6.3-8.5 6.3S3.5 19.2 3.5 15.7c0-2 .9-3.8 2.3-4.9-1.5-.8-2.2-2.7-1.5-4.3.8-1.8 2.9-2.6 4.8-2C9.3 3.1 10.5 2 12 2zm-4.5 11.5c-.2.7-.2 1.4-.1 2.1h9.2c.1-.7.1-1.4-.1-2.1H7.5zm.6 4.1c.7 1.2 2.2 2 3.9 2s3.2-.8 3.9-2H8.1z"/>
+        </svg>
+        <span>Discover Manchester</span>
+      </a>
+
+      <button
+        type="button"
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span>Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="attractions.html">Attractions</a></li>
+          <li>
+            <a class="nav-link" href="favourites.html">
+              <span>My Places</span>
+              <span id="nav-fav-count" aria-live="polite" aria-label="0 saved attractions">0</span>
+            </a>
+          </li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link nav-link--active" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="contact-heading">
+      <div class="container">
+        <h1 id="contact-heading">Visitor Enquiries &amp; Local Help</h1>
+        <p class="page-hero-text">
+          Planning a weekend in Manchester or need accessibility, tram, or group itinerary advice? Send us a message below.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <div>
+          <form id="contact-form" novalidate aria-labelledby="form-heading">
+            <h2 id="form-heading">Send an Enquiry</h2>
+            <p class="field-hint">Fields marked with <span class="required-mark" aria-hidden="true">*</span> are required.</p>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="full-name">
+                  Full Name <span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="fullName"
+                  required
+                  autocomplete="name"
+                  aria-describedby="full-name-error"
+                  aria-invalid="false"
+                  placeholder="e.g., Jordan Taylor"
+                >
+                <span class="field-error" id="full-name-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">
+                  Email Address <span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  aria-describedby="email-error"
+                  aria-invalid="false"
+                  placeholder="e.g., jordan@example.com"
+                >
+                <span class="field-error" id="email-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="topic">
+                  Enquiry Topic <span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <select
+                  id="topic"
+                  name="topic"
+                  required
+                  aria-describedby="topic-error"
+                  aria-invalid="false"
+                >
+                  <option value="">-- Choose a topic --</option>
+                  <option value="general">General Visitor Information</option>
+                  <option value="accessibility">Accessibility &amp; Step-Free Routes</option>
+                  <option value="itinerary">Family &amp; Group Itinerary Advice</option>
+                  <option value="transport">Metrolink &amp; Bee Network Travel</option>
+                  <option value="suggestion">Suggest a Local Attraction</option>
+                </select>
+                <span class="field-error" id="topic-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="visit-date">
+                  Planned Visit Date (Optional)
+                </label>
+                <input
+                  type="date"
+                  id="visit-date"
+                  name="visitDate"
+                  aria-describedby="visit-date-error"
+                  aria-invalid="false"
+                >
+                <span class="field-error" id="visit-date-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label class="form-label" for="message">
+                  Your Message <span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  aria-describedby="message-char-count message-error"
+                  aria-invalid="false"
+                  placeholder="Tell us what you'd like to explore in Manchester or how we can help..."
+                ></textarea>
+                <span class="field-hint" id="message-char-count">0 / 20 minimum characters</span>
+                <span class="field-error" id="message-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group form-group--full">
+                <button type="submit" class="btn btn--primary">Send Visitor Enquiry</button>
+              </div>
+            </div>
+          </form>
+
+          <div id="form-confirmation" class="form-confirmation" role="status" aria-live="polite" tabindex="-1" hidden>
+            <h2>Enquiry Received</h2>
+            <p id="confirmation-summary"></p>
+            <button type="button" id="new-enquiry-btn" class="btn btn--outline btn--sm">Send Another Enquiry</button>
+          </div>
+        </div>
+
+        <aside aria-label="Manchester visitor information centres">
+          <div class="sidebar-card">
+            <h2>Visitor Information Desk</h2>
+            <p>
+              Prefer speaking with someone in person once you arrive in Manchester? Drop by our central information points:
+            </p>
+            <ul class="sidebar-list">
+              <li><strong>Central Library Desk:</strong> St Peter's Square, M2 5PD (Mon–Sat, 09:00 – 17:00)</li>
+              <li><strong>Piccadilly Station Kiosk:</strong> Main Concourse, M60 7RA (Daily, 08:30 – 18:30)</li>
+              <li><strong>Accessibility Support:</strong> Step-free Metrolink maps and Changing Places facility guides available free of charge.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2 class="footer-heading">Discover Manchester</h2>
+          <p>
+            An independent, accessible visitor guide to Greater Manchester's architecture, museums, parks, food halls, and neighbourhoods.
+          </p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions Directory</a></li>
+            <li><a href="favourites.html">My Saved Places</a></li>
+            <li><a href="about.html">About Manchester</a></li>
+            <li><a href="contact.html">Contact &amp; Enquiries</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Visitor Essentials</h2>
+          <ul class="footer-links">
+            <li>Free Museums: Open 10:00 – 17:00</li>
+            <li>Metrolink Trams: Contactless Tap &amp; Go</li>
+            <li>Main Rail Hubs: Piccadilly &amp; Victoria</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Discover Manchester City Guide. Built with semantic HTML5, CSS3 &amp; ES6+.</p>
+        <p>City of Worker Bees &bull; M1 – M4 &amp; Greater Manchester</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-notification" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-labelledby="cv-title">
+  <title id="cv-title">Castlefield Urban Heritage Park, iron viaduct sky garden, and canal basin</title>
+  <rect width="600" height="400" fill="#1B2A38"/>
+  <!-- Elevated Viaduct with Greenery -->
+  <rect x="0" y="145" width="600" height="32" fill="#475569"/>
+  <circle cx="90" cy="135" r="24" fill="#40916C"/>
+  <circle cx="150" cy="130" r="28" fill="#52B788"/>
+  <circle cx="230" cy="135" r="22" fill="#2D6A4F"/>
+  <circle cx="340" cy="132" r="26" fill="#52B788"/>
+  <circle cx="430" cy="136" r="22" fill="#40916C"/>
+  <circle cx="510" cy="130" r="28" fill="#2D6A4F"/>
+  <!-- Brick & Iron Arches -->
+  <rect x="0" y="177" width="600" height="115" fill="#8C2F2B"/>
+  <path d="M55 292 V220 A48 48 0 0 1 151 220 V292 Z" fill="#1B2A38"/>
+  <path d="M252 292 V220 A48 48 0 0 1 348 220 V292 Z" fill="#1B2A38"/>
+  <path d="M449 292 V220 A48 48 0 0 1 545 220 V292 Z" fill="#1B2A38"/>
+  <!-- Canal Basin -->
+  <rect y="292" width="600" height="108" fill="#0F172A"/>
+  <line x1="90" y1="330" x2="210" y2="330" stroke="#52B788" stroke-width="3" opacity="0.55"/>
+  <line x1="310" y1="355" x2="460" y2="355" stroke="#F4B41A" stroke-width="2" opacity="0.5"/>
+</svg>

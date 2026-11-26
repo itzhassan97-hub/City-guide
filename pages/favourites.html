@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Saved Places | Discover Manchester City Guide</title>
+  <meta name="description" content="View and manage your saved Manchester attractions and build your personalised city itinerary.">
+  <meta property="og:title" content="My Saved Places — Discover Manchester">
+  <meta property="og:description" content="Review your saved Manchester landmarks, museums, parks, and food halls stored locally in your browser.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body data-page="favourites">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="index.html">
+        <svg class="brand-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2c1.5 0 2.7 1.1 2.9 2.5 1.9-.6 4 .2 4.8 2 .7 1.6 0 3.5-1.5 4.3 1.4 1.1 2.3 2.9 2.3 4.9 0 3.5-3.8 6.3-8.5 6.3S3.5 19.2 3.5 15.7c0-2 .9-3.8 2.3-4.9-1.5-.8-2.2-2.7-1.5-4.3.8-1.8 2.9-2.6 4.8-2C9.3 3.1 10.5 2 12 2zm-4.5 11.5c-.2.7-.2 1.4-.1 2.1h9.2c.1-.7.1-1.4-.1-2.1H7.5zm.6 4.1c.7 1.2 2.2 2 3.9 2s3.2-.8 3.9-2H8.1z"/>
+        </svg>
+        <span>Discover Manchester</span>
+      </a>
+
+      <button
+        type="button"
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span>Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="attractions.html">Attractions</a></li>
+          <li>
+            <a class="nav-link nav-link--active" href="favourites.html" aria-current="page">
+              <span>My Places</span>
+              <span id="nav-fav-count" aria-live="polite" aria-label="0 saved attractions">0</span>
+            </a>
+          </li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="favourites-heading">
+      <div class="container">
+        <h1 id="favourites-heading">My Saved Manchester Places</h1>
+        <p class="page-hero-text">
+          Your personal shortlist is saved automatically in your browser so you can review hours, transport links, and insider tips anytime.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Saved attractions list">
+      <div class="container">
+        <div class="favourites-toolbar">
+          <p id="saved-count" aria-live="polite">Saved Places: 0</p>
+          <div class="hero-actions">
+            <a class="btn btn--outline btn--sm" href="attractions.html">Add More Attractions</a>
+            <button type="button" id="clear-favourites-btn" class="btn btn--danger btn--sm" hidden>Clear All Saved</button>
+          </div>
+        </div>
+
+        <div id="favourites-grid" aria-live="polite"></div>
+
+        <div id="favourites-empty" class="empty-state" hidden>
+          <svg class="empty-state-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          <h2>No Saved Places Yet</h2>
+          <p>
+            You haven't added any Manchester attractions to your shortlist. Browse the directory and click "Add to Favourites" on any spot you'd like to visit.
+          </p>
+          <a class="btn btn--primary" href="attractions.html">Browse Manchester Attractions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Accessible Attraction Detail Modal -->
+  <div id="modal-backdrop" class="modal-backdrop" hidden>
+    <div id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <div>
+          <span id="modal-category" class="category-badge" data-category="Landmark">Category</span>
+          <h2 id="modal-title">Attraction Name</h2>
+        </div>
+        <button type="button" id="modal-close-btn" class="modal-close" aria-label="Close attraction details">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image-wrap">
+          <img id="modal-image" src="../media/images/john-rylands.svg" alt="Attraction preview" width="600" height="400">
+        </div>
+        <p id="modal-description" class="modal-description"></p>
+        <div class="modal-info-grid">
+          <div class="modal-info-item">
+            <span class="modal-info-label">Neighbourhood</span>
+            <span id="modal-neighbourhood"></span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-info-label">Opening Hours</span>
+            <span id="modal-hours"></span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-info-label">Admission &amp; Pricing</span>
+            <span id="modal-pricing"></span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-info-label">Nearest Transport</span>
+            <span id="modal-transport"></span>
+          </div>
+        </div>
+        <div class="modal-tip">
+          <strong>Insider Tip:</strong> <span id="modal-tip"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="modal-fav-btn" class="btn btn--outline" aria-pressed="false">Add to Favourites</button>
+          <button type="button" id="modal-close-footer-btn" class="btn btn--primary">Close Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2 class="footer-heading">Discover Manchester</h2>
+          <p>
+            An independent, accessible visitor guide to Greater Manchester's architecture, museums, parks, food halls, and neighbourhoods.
+          </p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions Directory</a></li>
+            <li><a href="favourites.html">My Saved Places</a></li>
+            <li><a href="about.html">About Manchester</a></li>
+            <li><a href="contact.html">Contact &amp; Enquiries</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Visitor Essentials</h2>
+          <ul class="footer-links">
+            <li>Free Museums: Open 10:00 – 17:00</li>
+            <li>Metrolink Trams: Contactless Tap &amp; Go</li>
+            <li>Main Rail Hubs: Piccadilly &amp; Victoria</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Discover Manchester City Guide. Built with semantic HTML5, CSS3 &amp; ES6+.</p>
+        <p>City of Worker Bees &bull; M1 – M4 &amp; Greater Manchester</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-notification" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

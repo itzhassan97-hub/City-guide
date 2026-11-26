@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attractions in Manchester | Discover Manchester City Guide</title>
+  <meta name="description" content="Search and filter Manchester's best landmarks, free museums, green parks, cultural venues, independent shopping districts, and food halls.">
+  <meta property="og:title" content="Manchester Attractions Directory">
+  <meta property="og:description" content="Filter 8 curated Manchester landmarks, museums, parks, and food spots, view opening hours, and save your favourites.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body data-page="attractions">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="index.html">
+        <svg class="brand-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2c1.5 0 2.7 1.1 2.9 2.5 1.9-.6 4 .2 4.8 2 .7 1.6 0 3.5-1.5 4.3 1.4 1.1 2.3 2.9 2.3 4.9 0 3.5-3.8 6.3-8.5 6.3S3.5 19.2 3.5 15.7c0-2 .9-3.8 2.3-4.9-1.5-.8-2.2-2.7-1.5-4.3.8-1.8 2.9-2.6 4.8-2C9.3 3.1 10.5 2 12 2zm-4.5 11.5c-.2.7-.2 1.4-.1 2.1h9.2c.1-.7.1-1.4-.1-2.1H7.5zm.6 4.1c.7 1.2 2.2 2 3.9 2s3.2-.8 3.9-2H8.1z"/>
+        </svg>
+        <span>Discover Manchester</span>
+      </a>
+
+      <button
+        type="button"
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span>Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link nav-link--active" href="attractions.html" aria-current="page">Attractions</a></li>
+          <li>
+            <a class="nav-link" href="favourites.html">
+              <span>My Places</span>
+              <span id="nav-fav-count" aria-live="polite" aria-label="0 saved attractions">0</span>
+            </a>
+          </li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="attractions-heading">
+      <div class="container">
+        <h1 id="attractions-heading">Explore Manchester Attractions</h1>
+        <p class="page-hero-text">
+          Search by name, neighbourhood, or keyword, filter by category, inspect full visitor info, and save your favourites for later.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Attractions search and listing">
+      <div class="container">
+        <div class="controls-panel">
+          <div class="search-row">
+            <label class="search-label" for="attraction-search">Search attractions by name, neighbourhood, or keyword</label>
+            <div class="search-input-wrap">
+              <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input
+                type="search"
+                id="attraction-search"
+                placeholder="e.g., Castlefield, Gothic, market, tram..."
+                autocomplete="off"
+              >
+            </div>
+          </div>
+
+          <div>
+            <span class="search-label" id="filter-group-label">Filter by category</span>
+            <div class="filter-group" role="group" aria-labelledby="filter-group-label">
+              <button type="button" class="filter-btn" data-filter="All" aria-pressed="true">All</button>
+              <button type="button" class="filter-btn" data-filter="Landmark" aria-pressed="false">Landmark</button>
+              <button type="button" class="filter-btn" data-filter="Museum" aria-pressed="false">Museum</button>
+              <button type="button" class="filter-btn" data-filter="Park" aria-pressed="false">Park</button>
+              <button type="button" class="filter-btn" data-filter="Culture" aria-pressed="false">Culture</button>
+              <button type="button" class="filter-btn" data-filter="Food" aria-pressed="false">Food</button>
+              <button type="button" class="filter-btn" data-filter="Shopping" aria-pressed="false">Shopping</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-bar">
+          <p id="results-count" class="results-count" aria-live="polite">Showing 8 of 8 attractions</p>
+          <a class="btn btn--outline btn--sm" href="favourites.html">Go to My Saved Places</a>
+        </div>
+
+        <div id="attractions-grid" aria-live="polite"></div>
+
+        <noscript>
+          <p class="empty-state">Please enable JavaScript to search, filter, and view full Manchester attraction details.</p>
+        </noscript>
+
+        <div id="attractions-empty" class="empty-state" hidden>
+          <h2>No Matching Attractions Found</h2>
+          <p>Try clearing your search term or switching back to all categories to view every Manchester highlight.</p>
+          <button type="button" id="reset-filters-btn" class="btn btn--primary">Reset Search &amp; Filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Accessible Attraction Detail Modal -->
+  <div id="modal-backdrop" class="modal-backdrop" hidden>
+    <div id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <div>
+          <span id="modal-category" class="category-badge" data-category="Landmark">Category</span>
+          <h2 id="modal-title">Attraction Name</h2>
+        </div>
+        <button type="button" id="modal-close-btn" class="modal-close" aria-label="Close attraction details">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image-wrap">
+          <img id="modal-image" src="../media/images/john-rylands.svg" alt="Attraction preview" width="600" height="400">
+        </div>
+        <p id="modal-description" class="modal-description"></p>
+        <div class="modal-info-grid">
+          <div class="modal-info-item">
+            <span class="modal-info-label">Neighbourhood</span>
+            <span id="modal-neighbourhood"></span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-info-label">Opening Hours</span>
+            <span id="modal-hours"></span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-info-label">Admission &amp; Pricing</span>
+            <span id="modal-pricing"></span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-info-label">Nearest Transport</span>
+            <span id="modal-transport"></span>
+          </div>
+        </div>
+        <div class="modal-tip">
+          <strong>Insider Tip:</strong> <span id="modal-tip"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="modal-fav-btn" class="btn btn--outline" aria-pressed="false">Add to Favourites</button>
+          <button type="button" id="modal-close-footer-btn" class="btn btn--primary">Close Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2 class="footer-heading">Discover Manchester</h2>
+          <p>
+            An independent, accessible visitor guide to Greater Manchester's architecture, museums, parks, food halls, and neighbourhoods.
+          </p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions Directory</a></li>
+            <li><a href="favourites.html">My Saved Places</a></li>
+            <li><a href="about.html">About Manchester</a></li>
+            <li><a href="contact.html">Contact &amp; Enquiries</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Visitor Essentials</h2>
+          <ul class="footer-links">
+            <li>Free Museums: Open 10:00 – 17:00</li>
+            <li>Metrolink Trams: Contactless Tap &amp; Go</li>
+            <li>Main Rail Hubs: Piccadilly &amp; Victoria</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Discover Manchester City Guide. Built with semantic HTML5, CSS3 &amp; ES6+.</p>
+        <p>City of Worker Bees &bull; M1 – M4 &amp; Greater Manchester</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-notification" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

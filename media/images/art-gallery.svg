@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-labelledby="mag-title">
+  <title id="mag-title">Manchester Art Gallery Greek Revival portico and columns</title>
+  <rect width="600" height="400" fill="#1E293B"/>
+  <rect y="325" width="600" height="75" fill="#334155"/>
+  <!-- Stone Portico -->
+  <rect x="90" y="155" width="420" height="170" fill="#E2E8F0"/>
+  <polygon points="150,155 300,85 450,155" fill="#CBD5E1"/>
+  <!-- Ionic Columns -->
+  <rect x="180" y="155" width="22" height="170" fill="#F8FAFC"/>
+  <rect x="235" y="155" width="22" height="170" fill="#F8FAFC"/>
+  <rect x="290" y="155" width="22" height="170" fill="#F8FAFC"/>
+  <rect x="345" y="155" width="22" height="170" fill="#F8FAFC"/>
+  <rect x="400" y="155" width="22" height="170" fill="#F8FAFC"/>
+  <!-- Framed Art Accent -->
+  <rect x="115" y="195" width="45" height="65" fill="#9B2226"/>
+  <rect x="440" y="195" width="45" height="65" fill="#D97706"/>
+  <!-- Entrance Steps -->
+  <rect x="165" y="310" width="270" height="15" fill="#94A3B8"/>
+</svg>

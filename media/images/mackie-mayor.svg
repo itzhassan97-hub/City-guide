@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-labelledby="mm-title">
+  <title id="mm-title">Mackie Mayor restored Victorian market hall with iron-and-glass roof</title>
+  <rect width="600" height="400" fill="#292524"/>
+  <rect y="330" width="600" height="70" fill="#44403C"/>
+  <!-- Market Hall Roof & Brick Walls -->
+  <polygon points="75,160 300,70 525,160" fill="#38BDF8" opacity="0.28"/>
+  <polygon points="75,160 300,70 525,160" fill="none" stroke="#F4B41A" stroke-width="6"/>
+  <rect x="85" y="160" width="430" height="170" fill="#9B2226"/>
+  <!-- Warm Glowing Archways -->
+  <path d="M120 330 V225 A45 45 0 0 1 210 225 V330 Z" fill="#FDE68A"/>
+  <path d="M255 330 V225 A45 45 0 0 1 345 225 V330 Z" fill="#F4B41A"/>
+  <path d="M390 330 V225 A45 45 0 0 1 480 225 V330 Z" fill="#FDE68A"/>
+  <!-- Market Tables Silhouette -->
+  <rect x="135" y="290" width="60" height="14" fill="#78350F"/>
+  <rect x="270" y="290" width="60" height="14" fill="#78350F"/>
+  <rect x="405" y="290" width="60" height="14" fill="#78350F"/>
+</svg>

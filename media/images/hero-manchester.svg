@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="hero-title">
+  <title id="hero-title">Manchester Skyline featuring Beetham Tower, red-brick railway viaduct, and canal reflection</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#131820"/>
+      <stop offset="60%" stop-color="#223044"/>
+      <stop offset="100%" stop-color="#9B2226"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182230"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="390" fill="url(#sky)"/>
+  <circle cx="640" cy="110" r="48" fill="#F4B41A" opacity="0.9"/>
+  <circle cx="640" cy="110" r="64" fill="#F4B41A" opacity="0.18"/>
+  <!-- City Skyline -->
+  <rect x="70" y="210" width="75" height="180" fill="#1B2432"/>
+  <rect x="155" y="165" width="60" height="225" fill="#273447"/>
+  <rect x="230" y="195" width="80" height="195" fill="#1F2937"/>
+  <!-- Beetham Tower silhouette -->
+  <polygon points="340,65 395,55 395,390 340,390" fill="#2D3E52"/>
+  <polygon points="340,65 395,55 395,82 340,82" fill="#F4B41A" opacity="0.75"/>
+  <rect x="355" y="98" width="24" height="240" fill="#64748B" opacity="0.25"/>
+  <!-- Clock Tower / Town Hall spire -->
+  <polygon points="440,145 462,90 484,145" fill="#7F1D1D"/>
+  <rect x="436" y="145" width="52" height="245" fill="#8B2635"/>
+  <circle cx="462" cy="168" r="10" fill="#FAF8F5"/>
+  <rect x="505" y="185" width="90" height="205" fill="#1B2432"/>
+  <rect x="610" y="220" width="110" height="170" fill="#263244"/>
+  <!-- Red Brick Viaduct -->
+  <rect x="0" y="315" width="800" height="75" fill="#7C2D12"/>
+  <rect x="0" y="310" width="800" height="10" fill="#9A3412"/>
+  <path d="M40 390 V345 A35 35 0 0 1 110 345 V390 Z" fill="#1A2433"/>
+  <path d="M160 390 V345 A35 35 0 0 1 230 345 V390 Z" fill="#1A2433"/>
+  <path d="M280 390 V345 A35 35 0 0 1 350 345 V390 Z" fill="#1A2433"/>
+  <path d="M400 390 V345 A35 35 0 0 1 470 345 V390 Z" fill="#1A2433"/>
+  <path d="M520 390 V345 A35 35 0 0 1 590 345 V390 Z" fill="#1A2433"/>
+  <path d="M640 390 V345 A35 35 0 0 1 710 345 V390 Z" fill="#1A2433"/>
+  <!-- Canal Water & Reflections -->
+  <rect x="0" y="390" width="800" height="110" fill="url(#water)"/>
+  <line x1="340" y1="415" x2="395" y2="415" stroke="#F4B41A" stroke-width="3" opacity="0.6"/>
+  <line x1="615" y1="430" x2="665" y2="430" stroke="#F4B41A" stroke-width="2" opacity="0.5"/>
+  <line x1="120" y1="450" x2="210" y2="450" stroke="#94A3B8" stroke-width="2" opacity="0.35"/>
+  <line x1="450" y1="468" x2="540" y2="468" stroke="#F4B41A" stroke-width="2" opacity="0.4"/>
+  <!-- Narrowboat -->
+  <rect x="170" y="388" width="110" height="16" rx="4" fill="#9B2226"/>
+  <rect x="190" y="380" width="70" height="10" rx="2" fill="#F4B41A"/>
+  <circle cx="208" cy="385" r="2.5" fill="#131820"/>
+  <circle cx="224" cy="385" r="2.5" fill="#131820"/>
+  <circle cx="240" cy="385" r="2.5" fill="#131820"/>
+</svg>

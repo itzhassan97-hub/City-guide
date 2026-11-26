@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Manchester | Official City Guide &amp; Top Attractions</title>
+  <meta name="description" content="Explore Manchester's iconic Victorian landmarks, free world-class museums, independent Northern Quarter shops, canal walks, and local visitor tips.">
+  <meta property="og:title" content="Discover Manchester — City Guide">
+  <meta property="og:description" content="Your interactive guide to Manchester's best landmarks, museums, parks, street food, and neighbourhoods.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="index.html">
+        <svg class="brand-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2c1.5 0 2.7 1.1 2.9 2.5 1.9-.6 4 .2 4.8 2 .7 1.6 0 3.5-1.5 4.3 1.4 1.1 2.3 2.9 2.3 4.9 0 3.5-3.8 6.3-8.5 6.3S3.5 19.2 3.5 15.7c0-2 .9-3.8 2.3-4.9-1.5-.8-2.2-2.7-1.5-4.3.8-1.8 2.9-2.6 4.8-2C9.3 3.1 10.5 2 12 2zm-4.5 11.5c-.2.7-.2 1.4-.1 2.1h9.2c.1-.7.1-1.4-.1-2.1H7.5zm.6 4.1c.7 1.2 2.2 2 3.9 2s3.2-.8 3.9-2H8.1z"/>
+        </svg>
+        <span>Discover Manchester</span>
+      </a>
+
+      <button
+        type="button"
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span>Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link nav-link--active" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav-link" href="attractions.html">Attractions</a></li>
+          <li>
+            <a class="nav-link" href="favourites.html">
+              <span>My Places</span>
+              <span id="nav-fav-count" aria-live="polite" aria-label="0 saved attractions">0</span>
+            </a>
+          </li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-badge">North West England &bull; The Worker Bee City</span>
+          <h1 id="hero-heading">Industrial Soul, Creative Spirit, Unforgettable Streets</h1>
+          <p class="hero-text">
+            From Neo-Gothic libraries and historic railway viaducts to buzzing Victorian food halls and world-famous music venues, explore everything Manchester has to offer.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn--gold" href="attractions.html">Explore All Attractions</a>
+            <a class="btn btn--outline-light" href="about.html">Read the City Guide</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img
+            src="../media/images/hero-manchester.svg"
+            alt="Panoramic illustration of the Manchester skyline featuring Beetham Tower, red-brick viaduct arches, and a canal narrowboat"
+            width="800"
+            height="500"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="snapshot-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Why Visit Manchester</span>
+          <h2 id="snapshot-heading" class="section-title">A City Built on Invention &amp; Warmth</h2>
+        </div>
+        <div class="snapshot-grid">
+          <aside class="snapshot-card">
+            <h3>&#9881;&#65039; Birthplace of Modern Industry</h3>
+            <p>Walk alongside 18th-century canals, Roman fort ruins in Castlefield, and the world's oldest surviving passenger railway station.</p>
+          </aside>
+          <aside class="snapshot-card">
+            <h3>&#127925; Music, Art &amp; Football</h3>
+            <p>Experience legendary indie venues, free Pre-Raphaelite galleries, L.S. Lowry's waterfront museum, and world-famous stadium tours.</p>
+          </aside>
+          <aside class="snapshot-card">
+            <h3>&#128651; Easy Bee Network Travel</h3>
+            <p>Tap-in contactless Metrolink trams and free city-centre buses connect Ancoats, Deansgate, and Salford Quays in minutes.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Top Picks</span>
+          <h2 id="featured-heading" class="section-title">Featured Manchester Attractions</h2>
+          <p class="section-lead">
+            Start your itinerary with three iconic spots loved by locals and first-time visitors alike. Save favourites to build your personal trip list.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-media">
+              <img
+                src="../media/images/john-rylands.svg"
+                alt="Illustration of the John Rylands Library sandstone Neo-Gothic facade and glowing stained-glass windows"
+                width="600"
+                height="400"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="category-badge" data-category="Landmark">Landmark</span>
+                <span class="card-location">&#128205; Deansgate</span>
+              </div>
+              <h3 class="card-title">John Rylands Library</h3>
+              <p class="card-description">
+                Step inside a cathedral-like Victorian Neo-Gothic library housing rare manuscripts, soaring vaulted stone ceilings, and free exhibitions.
+              </p>
+              <div class="card-actions">
+                <a class="btn btn--primary btn--sm" href="attractions.html?category=Landmark">Explore Landmarks</a>
+                <button type="button" class="btn btn--outline btn--sm" data-fav-id="john-rylands" aria-pressed="false">Add to Favourites</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img
+                src="../media/images/science-industry.svg"
+                alt="Illustration of the red-brick Science and Industry Museum railway warehouse with a gold steam wheel"
+                width="600"
+                height="400"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="category-badge" data-category="Museum">Museum</span>
+                <span class="card-location">&#128205; Castlefield</span>
+              </div>
+              <h3 class="card-title">Science &amp; Industry Museum</h3>
+              <p class="card-description">
+                Discover working cotton mill machinery, early computing breakthroughs, and steam locomotives on Manchester's historic 1830 railway site.
+              </p>
+              <div class="card-actions">
+                <a class="btn btn--primary btn--sm" href="attractions.html?category=Museum">Explore Museums</a>
+                <button type="button" class="btn btn--outline btn--sm" data-fav-id="science-industry" aria-pressed="false">Add to Favourites</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img
+                src="../media/images/mackie-mayor.svg"
+                alt="Illustration of Mackie Mayor restored Victorian market hall with glowing arches and glass roof"
+                width="600"
+                height="400"
+                loading="lazy"
+              >
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="category-badge" data-category="Food">Food</span>
+                <span class="card-location">&#128205; Ancoats Edge</span>
+              </div>
+              <h3 class="card-title">Mackie Mayor Market Hall</h3>
+              <p class="card-description">
+                Dine beneath an 1858 iron-and-glass market roof offering independent street food kitchens, artisan coffee, and Northern craft ales.
+              </p>
+              <div class="card-actions">
+                <a class="btn btn--primary btn--sm" href="attractions.html?category=Food">Explore Food Spots</a>
+                <button type="button" class="btn btn--outline btn--sm" data-fav-id="mackie-mayor" aria-pressed="false">Add to Favourites</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="plan-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Plan Your Trip</span>
+          <h2 id="plan-heading" class="section-title">Ready to Build Your Manchester Itinerary?</h2>
+          <p class="section-lead">
+            Filter all 8 curated attractions by neighbourhood or category, save your must-see spots in My Places, or send our visitor desk an enquiry.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="attractions.html">Browse Full Directory</a>
+          <a class="btn btn--outline" href="favourites.html">View My Saved Places</a>
+          <a class="btn btn--outline" href="contact.html">Ask a Local Question</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2 class="footer-heading">Discover Manchester</h2>
+          <p>
+            An independent, accessible visitor guide to Greater Manchester's architecture, museums, parks, food halls, and neighbourhoods.
+          </p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions Directory</a></li>
+            <li><a href="favourites.html">My Saved Places</a></li>
+            <li><a href="about.html">About Manchester</a></li>
+            <li><a href="contact.html">Contact &amp; Enquiries</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Visitor Essentials</h2>
+          <ul class="footer-links">
+            <li>Free Museums: Open 10:00 – 17:00</li>
+            <li>Metrolink Trams: Contactless Tap &amp; Go</li>
+            <li>Main Rail Hubs: Piccadilly &amp; Victoria</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Discover Manchester City Guide. Built with semantic HTML5, CSS3 &amp; ES6+.</p>
+        <p>City of Worker Bees &bull; M1 – M4 &amp; Greater Manchester</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-notification" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
